@@ -48,5 +48,12 @@ public class Day1
         }
         elfs.Sort((x, y) => x.Foods.Sum(z => z.Calories).CompareTo(y.Foods.Sum(z => z.Calories)));
         Console.WriteLine(elfs[elfs.Count-1].Name);
-        Console.WriteLine(elfs[elfs.Count-1].Foods.Sum(x => x.Calories)); }
+        Console.WriteLine(elfs[elfs.Count-1].Foods.Sum(x => x.Calories)); 
+        Console.WriteLine(elfs[elfs.Count-2].Name);
+        Console.WriteLine(elfs[elfs.Count-2].Foods.Sum(x => x.Calories)); 
+        Console.WriteLine(elfs[elfs.Count-3].Name);
+        Console.WriteLine(elfs[elfs.Count-3].Foods.Sum(x => x.Calories)); 
+        Console.WriteLine(elfs[elfs.Count-1].Foods.Sum(x => x.Calories) + elfs[elfs.Count-2].Foods.Sum(x => x.Calories) + elfs[elfs.Count-3].Foods.Sum(x => x.Calories));
+    }
+    
 }
