@@ -4,14 +4,14 @@ public class Elf
 {
     private int id;
     private string name;
-    private List<Food> food;
-    private List<int> foodAmount;
-    
+    private List<Food> foods;
+
     // constructor
     public Elf(int id, string name)
     {
         this.id = id;
         this.name = name;
+        this.foods = new List<Food>();
     }
     
     // getters and setters
@@ -26,15 +26,12 @@ public class Elf
         get => name;
         set => name = value ?? throw new ArgumentNullException(nameof(value));
     }
-
-    public int FoodAmount
+    
+    public List<Food> Foods
     {
-        get => food.Count;
+        get => foods;
+        set => foods = value ?? throw new ArgumentNullException(nameof(value));
     }
-
-    public List<Food> Food
-    {
-        get => food;
-        set => food = value ?? throw new ArgumentNullException(nameof(value));
-    }
+    
+    
 }
